@@ -12,7 +12,7 @@ export default function MenuItemCard({ item }: Props) {
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.course}>{item.course}</Text>
       <Text style={styles.description}>{item.description}</Text>
-      <Text style={styles.price}>R {item.price.toFixed(2)}</Text>
+      <Text style={styles.price}>R {item.price}</Text>
     </View>
   );
 }

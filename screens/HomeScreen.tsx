@@ -8,7 +8,7 @@ import { useNavigation } from "@react-navigation/native";
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, "Home">;
 
-export default function HomeScreen() {
+const HomeScreen: React.FC = () => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
@@ -48,6 +48,8 @@ export default function HomeScreen() {
     </View>
   );
 }
+export default HomeScreen;
+
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#FFF8DC", padding: 16 },

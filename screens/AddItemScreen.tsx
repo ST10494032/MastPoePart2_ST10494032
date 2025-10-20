@@ -5,7 +5,8 @@ import { MenuItem } from "../types/MenuItem";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { v4 as uuidv4 } from "uuid";
 
-export default function AddItemScreen() {
+const AddItemScreen: React.FC = () => {
+
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [course, setCourse] = useState("Starters");
@@ -26,7 +27,7 @@ export default function AddItemScreen() {
       name,
       description,
       course,
-      price: parseFloat(price),
+      price: parseInt(price),
     };
 
     setMenuItems([...menuItems, newItem]);
@@ -76,7 +77,7 @@ export default function AddItemScreen() {
     </View>
   );
 }
-
+export default AddItemScreen;
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#FFF8DC", padding: 20 },
   label: { fontSize: 16, fontWeight: "bold", color: "#8B7500", marginBottom: 6 },
